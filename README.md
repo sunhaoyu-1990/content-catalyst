@@ -1,5 +1,21 @@
 # 内容创作助手 - 用户指南
 
+<div align="center">
+
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Claude Code](https://img.shields.io/badge/Claude_Code-Compatible-green.svg)
+![Platforms](https://img.shields.io/badge/platforms-4-blueviolet.svg)
+
+**基于 Claude AI 的多平台内容创作自动化系统**
+
+[快速开始](#-30秒快速开始) • [功能特性](#-核心特性) • [贡献指南](#-反馈与贡献)
+
+[English](README.en.md) | [日本語版](README.ja.md)
+
+</div>
+
+---
+
 **版本**: v1.5
 **最后更新**: 2026-01-30
 
@@ -376,3 +392,11 @@ workspace/
 **文档维护**: 由 Claude AI 和用户共同维护
 **最后更新**: 2026-01-30
 **项目版本**: v1.5
+
+---
+
+<div align="center">
+
+**[English](README.en.md) | [日本語版](README.ja.md)**
+
+</div>
