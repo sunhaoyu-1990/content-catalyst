@@ -1,0 +1,105 @@
+# ==============================
+# 内容创作助手 - Git 忽略规则
+# ==============================
+
+# ------------------
+# 用户数据与产出
+# ------------------
+workspace/
+talk_with_ai/
+
+# ------------------
+# 其他项目/系统
+# ------------------
+ai_live_work_system/
+_bmad/
+_bmad-output/
+claude_code_cockpit_record/
+claude_code_content/
+code_buddy/
+dify_work_flow/
+get_info/
+zhihu_anther/
+个人履历系统/
+xinli_project/
+
+# ------------------
+# .claude/ 中与内容创作无关的文件
+# ------------------
+# 通用 agents（非内容创作专用）
+.claude/agents/
+.claude/agents-content/
+
+# 通用命令（非内容创作专用）
+.claude/commands/
+
+# 通用 hooks 模板
+.claude/hooks/
+
+# 通用知识库
+.claude/knowledge/
+
+# 通用模板
+.claude/templates/
+
+# 用户配置文件
+.claude/settings.json
+.claude/settings.local.json
+
+# 评估/分析/报告文件
+.claude/*-assessment.md
+.claude/*-analysis.md
+.claude/*-report.md
+.claude/*-completion.md
+
+# ------------------
+# 临时与测试目录
+# ------------------
+.clactory/
+
+# ------------------
+# Python 虚拟环境
+# ------------------
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ------------------
+# Node.js 依赖
+# ------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ------------------
+# IDE 配置
+# ------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ------------------
+# 系统文件
+# ------------------
+Thumbs.db
+Desktop.ini
+
+# ------------------
+# 本地配置（敏感）
+# ------------------
+.env
+.env.local
+*.secret
+
+# ------------------
+# 临时文件
+# ------------------
+*.tmp
+*.temp
+*.log
