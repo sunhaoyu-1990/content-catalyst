@@ -8,7 +8,7 @@
 
 **基于 Claude AI 的多平台内容创作自动化系统**
 
-[快速开始](#quick-start) • [功能特性](#核心特性) • [贡献指南](#反馈与贡献)
+[快速开始](#quick-start) • [功能特性](#features) • [贡献指南](#contributing)
 
 [English](README.en.md) | [日本語版](README.ja.md)
 
@@ -21,22 +21,8 @@
 
 ---
 
-## 📖 项目简介 {#overview}
-
-这是一个基于 Claude AI 的内容创作助手，支持为多个平台（知乎、领英、小红书、X/Twitter）自动生成高质量内容。
-
-**核心特性**：
-- ✅ 多平台支持（知乎、领英、小红书、X）
-- ✅ 智能资料收集（4轮搜索策略）
-- ✅ 选题评分筛选（10分评分系统）
-- ✅ 一键内容生成
-- ✅ 自动质量审查
-- ✅ 自动图片标记
-- ✅ 双模式（极简/完整）
-
----
-
-## 🚀 30秒快速开始 {#quick-start}
+<a name="quick-start"></a>
+## 🚀 30秒快速开始
 
 ### 你是哪种用户？
 
@@ -76,11 +62,25 @@
 
 ### 高级用户
 
-需要系统化管理内容、版本控制、跨平台复用？查看 [模式选择](#modes)
+需要系统化管理内容、版本控制、跨平台复用？查看 [完整模式指南](docs/content-creation-guides/complete-mode-guide.md)
 
 ---
 
-## 📋 快速参考 {#quick-reference}
+<a name="features"></a>
+## 📖 核心特性
+
+- ✅ 多平台支持（知乎、领英、小红书、X）
+- ✅ 智能资料收集（4轮搜索策略）
+- ✅ 选题评分筛选（10分评分系统）
+- ✅ 一键内容生成
+- ✅ 自动质量审查
+- ✅ 自动图片标记
+- ✅ 双模式（极简/完整）
+
+---
+
+<a name="quick-reference"></a>
+## 📋 快速参考
 
 ### 支持平台
 
@@ -124,7 +124,8 @@
 
 ---
 
-## 📂 两个目录的区别 {#workspace-vs-talk}
+<a name="workspace-vs-talk"></a>
+## 📂 两个目录的区别
 
 | 特性 | workspace/ | talk_with_ai/ |
 |------|-----------|---------------|
@@ -139,7 +140,8 @@
 
 ---
 
-## 🎯 模式选择 {#modes}
+<a name="modes"></a>
+## 🎯 模式选择
 
 ### 极简模式（推荐新手）
 
@@ -213,7 +215,8 @@ workspace/
 
 ---
 
-## ⚙️ 自动化功能 {#automation}
+<a name="automation"></a>
+## ⚙️ 自动化功能
 
 ### 规则驱动架构（v1.5新增）
 
@@ -237,7 +240,8 @@ workspace/
 
 ---
 
-## 🔧 技能系统 {#skills-system}
+<a name="skills-system"></a>
+## 🔧 技能系统
 
 ### 4大核心技能
 
@@ -257,7 +261,8 @@ workspace/
 
 ---
 
-## 📊 平台特色 {#platforms}
+<a name="platforms"></a>
+## 📊 平台特色
 
 ### 知乎 - 专业深度
 
@@ -285,7 +290,8 @@ workspace/
 
 ---
 
-## ❓ 常见问题 {#faq}
+<a name="faq"></a>
+## ❓ 常见问题
 
 ### Q1: 如何开始第一次创作？
 
@@ -293,6 +299,7 @@ workspace/
 ```bash
 /xiaohongshu-create "你想写的主题"
 ```
+
 系统会自动完成创作、审查、图片标记。
 
 ### Q2: 创作内容保存在哪里？
@@ -336,7 +343,8 @@ workspace/
 
 ---
 
-## 🛠️ 高级功能 {#advanced}
+<a name="advanced"></a>
+## 🛠️ 高级功能
 
 ### 自定义评分权重
 
@@ -358,7 +366,8 @@ workspace/
 
 ---
 
-## 📚 相关文档 {#documentation}
+<a name="documentation"></a>
+## 📚 相关文档
 
 ### 核心规范
 - [CLAUDE.md](CLAUDE.md) - 项目核心规范和技术架构
@@ -376,7 +385,8 @@ workspace/
 
 ---
 
-## 🤝 反馈与贡献 {#contributing}
+<a name="contributing"></a>
+## 🤝 反馈与贡献
 
 **反馈渠道**：
 - 有问题或建议？更新本文档并记录版本变更
