@@ -8,7 +8,7 @@
 
 **Multi-Platform Content Creation Automation System Based on Claude AI**
 
-[Quick Start](#-quick-start) • [Features](#-features) • [Contributing](#-contributing)
+[Quick Start](#quick-start) • [Features](#features) • [Contributing](#contributing)
 
 [中文版](README.md) | [日本語版](README.ja.md)
 
@@ -23,15 +23,16 @@
 ### Key Features
 
 - ✅ **Multi-Platform Support** - Zhihu, LinkedIn, Xiaohongshu, X/Twitter
+- ✅ **Natural Language Trigger** - Just describe what you need in plain language
 - ✅ **Smart Research** - 4-round search strategy for comprehensive material collection
 - ✅ **Topic Scoring** - 10-point scoring system for topic selection
-- ✅ **One-Click Creation** - Automated content generation workflow
 - ✅ **Auto Quality Review** - 6-dimensional quality assessment
 - ✅ **Auto Image Marking** - Includes AI-generated image prompts
 - ✅ **Dual Modes** - Simple mode + Complete mode
 
 ---
 
+<a name="quick-start"></a>
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -60,15 +61,115 @@ cp -r .claude/profiles/* ~/.claude/profiles/
 
 ### First Use
 
-```bash
-# Simplest way - Create content directly
-/xiaohongshu-create "AI Writing Tools Recommendation"
+**Just describe what you need in natural language:**
 
-# System will automatically:
-# 1. Collect materials
-# 2. Create content
-# 3. Quality review
-# 4. Image marking
+```
+User: Help me write a Xiaohongshu post about "AI Writing Tools Recommendation"
+
+Claude: [Auto execute: Create → Quality Review → Image Marking]
+        Done! Content saved to workspace/ai-writing-tools/content.md
+```
+
+**That's it!** Claude will automatically create content, run quality review, and add image markers.
+
+---
+
+<a name="features"></a>
+## 🎯 Two Modes
+
+Both modes are triggered by **natural language conversation**. Claude handles everything automatically.
+
+### Simple Mode (Recommended for Beginners)
+
+**Use Cases:**
+- Quick content creation
+- No version management needed
+- No cross-platform reuse needed
+
+**How to Use:** Just tell Claude what you need
+
+```
+User: Help me write a Xiaohongshu post about "AI Writing Tools"
+
+Claude: [Auto: Create → Review → Mark]
+        Done! Content saved.
+```
+
+**Automated Flow:**
+```
+Natural Language Request → Create → Auto Review → Auto Mark → Done
+```
+
+### Complete Mode (Recommended for Advanced Users)
+
+**Use Cases:**
+- Systematic content management
+- Version control and history tracking
+- Cross-platform content reuse
+
+**How to Use:** Add "complete mode" keyword
+
+```
+User: I want to use complete mode to create content about "AI Writing Tools" for Zhihu and LinkedIn
+
+Claude: Starting complete mode workflow:
+
+        Step 1: Creating directory structure
+        workspace/ai-writing-tools/2026-02-13/
+        ├── 00_collect/zhihu/
+        ├── 00_collect/linkedin/
+        ├── 01_filter/
+        ├── 02_create/zhihu/
+        ├── 02_create/linkedin/
+        └── 03_publish/
+
+        Step 2: Collecting materials (4-round search)
+        [Auto executing collect skill]
+
+        Step 3: Filtering topics (10-point scoring)
+        [Auto executing filter skill]
+
+        Step 4: Creating content (per platform specs)
+        [Auto executing create skill → Quality review → Image marking]
+
+        Step 5: Publish preparation
+        [Auto executing publish skill]
+
+        All done! Content saved.
+```
+
+**Automated Flow:**
+```
+Natural Language + "Complete Mode"
+    ↓
+Auto Create Directory Structure
+    ↓
+Auto Collect Materials
+    ↓
+Auto Filter Topics
+    ↓
+Auto Create Content
+    ↓
+Auto Quality Review
+    ↓
+Auto Image Marking
+    ↓
+Auto Publish Preparation
+    ↓
+Done!
+```
+
+**Directory Structure (Auto Created):**
+```
+workspace/
+├── index.md                # Main index (auto updated)
+└── {topic}/
+    └── {version}/          # Auto naming: date for first, v2,v3... for later
+        ├── 00_collect/     # Collect stage (auto generated)
+        ├── 01_filter/      # Filter stage (auto generated)
+        ├── 02_create/      # Create stage (auto generated)
+        ├── 03_publish/     # Publish stage (auto generated)
+        └── task.md         # Task tracking (auto maintained)
 ```
 
 ---
@@ -119,26 +220,19 @@ For detailed architecture, see [CLAUDE.md](CLAUDE.md)
 
 ---
 
-## 📚 Core Commands
+## 📚 Common Examples
 
-```bash
-# Material collection
-/{platform}-collect "topic"
+**Simple Mode** (just describe your needs):
+```
+User: Help me write a Xiaohongshu post about "AI Writing Tools Recommendation"
+User: Write a Zhihu answer for "What are the must-have performance analysis tools for programmers"
+User: Help me write a tweet about AI tools
+```
 
-# Topic filtering
-/{platform}-filter
-
-# Content creation
-/{platform}-create "topic"
-
-# Publish preparation
-/{platform}-publish
-
-# Content review
-Use content-reviewer to review [article]
-
-# Language simplification
-Use language-simplifier to simplify "[expression]"
+**Complete Mode** (add "complete mode" keyword):
+```
+User: I want to use complete mode to create content about "Performance Analysis Tools" for Zhihu
+User: Please use complete mode to help me create "AI Writing Tools Review" for Zhihu and Xiaohongshu
 ```
 
 ---
